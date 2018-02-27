@@ -22,7 +22,7 @@ export class CoursesComponent implements OnInit {
   }
 
   onSave($event) {
-    $event.stopPropagation();  // Prevents elements that this button is inside of from firing their click events
+    $event.stopPropagation();  //Prevents elements that this button is inside of from firing their click events
     let btnId: string = ($event.target as Element).id;  // js solution $event.target.attributes.id;
     console.log("Button ID: ", btnId);
     console.log("Save button was clicked" + $event, $event);
