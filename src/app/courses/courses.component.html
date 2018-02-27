@@ -19,3 +19,15 @@
         <td [attr.colspan]="colSpan">Test</td>
     </tr>
 </table>
+<br> Input Stuff
+<input (keyup)="onKeyUpOldSchool($event)">
+<input (keyup.enter)="onKeyUp()">
+<br> Template referencing instead of $event ?? https://angular.io/guide/user-input
+<input #box (keyup)="onKey(box.value)">
+<p>{{values}}</p>
+
+<br> Filter The #boxF is a variable
+<input #boxF (keyup.enter)="onEnter(boxF.value)">
+<p>{{value}}</p>
+<br>
+<input class="form-control" #email (keyup.enter)="onEnterEmail(email.value)" placeholder="enter email">

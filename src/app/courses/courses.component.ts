@@ -30,5 +30,29 @@ export class CoursesComponent implements OnInit {
   onDivClicked() {
     console.log('Div was clicked');
   }
+  onKeyUp() {
+    console.log("Enter key was pressed - new school");
+  }
+  onKeyUpOldSchool($event) {
+    if ($event.keyCode === 13) {
+      console.log("enter was pressed - old school");
+    }
+
+  }
+
+  values = '';
+  onKey(value: string) {
+    this.values += value + ' | ';
+  }
+
+  value2 = '';
+  onEnter(value: string) {
+    this.value2 = value;
+    console.log(this.value2);
+  }
+
+  onEnterEmail(email: string) {
+    console.log("Email Entered", email);
+  }
 
 }
